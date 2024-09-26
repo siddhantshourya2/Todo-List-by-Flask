@@ -1,0 +1,37 @@
+FLASK
+
+1. Install "Virtual Env" using cmd with command pip install virtualenv.
+
+Virtual Env is used to create complete different environment. Like if we want to work on different versions of python and same with the packages then we use it. By using this there are two different versions of python can be there.
+
+2. To run Virtual Env
+python .\<filename>.py
+
+3. To import html file in flask we use import render_template
+def hello_world():
+    return render_template('index.html')
+
+Inside function we put the html file.
+
+4. Sometimes Virtual Env deactivates, to activate it we use command .\env\Scripts\activate.ps1
+
+5. To make a database in FLASK we have too create a class in <filename>.py
+
+6. To create a database in we have to install a package with command - pip install flask-sqlalchemy
+where sqlalchemy provide facilities to change in database using python.
+
+7. If we want to reflect parts of the database then we use
+def __repr__(self) -> str:
+        return f"{}" // It will reflect the parts of the website.
+For two parts
+def __repr__(self) -> str:
+        return f"{} - {}"
+Likewise
+
+8. To create a database file then we have to run python in CMD then write
+from app import db
+db.create_all()
+
+For production level when we want to share project with someone then it's better to attach the version file of all the packages used in this project.
+
+Command : pip freeze >requirements.txt (It will generate the text file in the folder)
